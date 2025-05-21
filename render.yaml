@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: n8n-assurance
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm run build"
+    startCommand: "n8n"
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "Assurance2025@"
+      - key: N8N_HOST
+        value: "n8n-assurance.onrender.com"
+      - key: WEBHOOK_URL
+        value: "https://n8n-assurance.onrender.com"
+      - key: NODE_ENV
+        value: "production"
+    disk:
+      name: n8n-data
+      mountPath: /data
+      sizeGB: 1

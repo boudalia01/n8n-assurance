@@ -1,0 +1,13 @@
+{
+  "name": "n8n-assurance",
+  "version": "1.0.0",
+  "description": "Déploiement n8n sur Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "n8n",
+    "build": "echo Build step not needed"
+  },
+  "dependencies": {
+    "n8n": "^0.228.0"
+  }
+}
